@@ -3,4 +3,16 @@
 	z-index: 50;
 	background: linear-gradient(281.84deg, #D3DCE3 0%, #ECF1F5 100%);
 	@include rfs(192px, padding-top);
+
+	.hero-title {
+		@include font-size(96px);
+		line-height: 1.1;
+		font-weight: $font-weight-normal;
+		@include rfs(25px, margin-bottom);
+	}
+	.hero-subtitle {
+		@include font-size(32px);
+		line-height: 1.45;
+		@include rfs(35px, margin-bottom);
+	}
 }

@@ -1,15 +1,22 @@
 // Typeography
 $font-family-sans-serif: 'Open Sans', sans-serif;
-$font-family-sans-serif-italic: 'Open Sans Italic', sans-serif;
+// $font-family-sans-serif-italic: 'Open Sans Italic', sans-serif;
 $font-family-serif: 'DM Serif Display', serif;
-$font-family-serif-italic: 'DM Serif Display Italic', serif;
+// $font-family-serif-italic: 'DM Serif Display Italic', serif;
+// Weights
+$font-weight-extra-bold: 800;
 // Headings
 $headings-font-family: $font-family-serif;
 // Nav
 $navbar-nav-link-padding-x: 1.5rem;
-$nav-link-color: #000;
 
 // Colors
+$cyan: #08AEEA;
 $body-color: #2E3444;
+// Toggle Control
 $toggle-light: #4D5569;
 $toggle-dark: #ECF1F5;
+// Nav
+$nav-link-color: #000;
+// Buttons
+$btn-link-color: $body-color;

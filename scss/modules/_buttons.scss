@@ -1,0 +1,38 @@
+.btn {
+	&.btn-link {
+		@include font-size(24px);
+		text-transform: uppercase;
+		font-weight: $font-weight-bold;
+		padding-left: 0;
+		padding-right: 0;
+
+		&[class*="has-gradient-"] {
+			text-decoration: none;
+		}
+		&.has-arrow-right {
+			.svg-inline--fa {
+				transition: transform 0.25s;
+			}
+			&:hover {
+				.svg-inline--fa {
+					// transform: translateX(5px);
+				}
+			}
+		}
+		&.has-gradient-1 {
+			background: linear-gradient(to right, rgba(42,245,152,1), rgba(8,174,234,1)), linear-gradient(to right, rgba(8,174,234,1), rgba(42,245,152,1));
+			background-size: 100% 4px, 0 4px;
+			background-position: 100% 100%, 0 100%;
+			background-repeat: no-repeat;
+			transition: background-size 400ms, background-position 400ms;
+
+			&:hover {
+				background-size: 0 8px, 100% 8px;
+				color: $btn-link-color;
+			}
+			.svg-inline--fa {
+				color: $cyan;
+			}
+		}
+	}
+}

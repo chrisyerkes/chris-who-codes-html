@@ -21,9 +21,29 @@
 	src: url('../fonts/opensans-italic-variablefont_wdthwght-webfont.woff2') format('woff2'),
 			 url('../fonts/opensans-italic-variablefont_wdthwght-webfont.woff') format('woff');
 	font-stretch: 100%;
-	font-weight: 100 900;
+	font-weight: 100;
 	font-style: italic;
+	font-display: swap;
+}
 
+@font-face {
+	font-family: 'Open Sans Italic';
+	src: url('../fonts/opensans-italic-variablefont_wdthwght-webfont.woff2') format('woff2'),
+			 url('../fonts/opensans-italic-variablefont_wdthwght-webfont.woff') format('woff');
+	font-stretch: 100%;
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Open Sans Italic';
+	src: url('../fonts/opensans-italic-variablefont_wdthwght-webfont.woff2') format('woff2'),
+			 url('../fonts/opensans-italic-variablefont_wdthwght-webfont.woff') format('woff');
+	font-stretch: 100%;
+	font-weight: 800;
+	font-style: italic;
+	font-display: swap;
 }
 
 @font-face {
@@ -31,7 +51,27 @@
 	src: url('../fonts/opensans-variablefont_wdthwght-webfont.woff2') format('woff2'),
 			 url('../fonts/opensans-variablefont_wdthwght-webfont.woff') format('woff');
 	font-stretch: 100%;
-	font-weight: 100 900;
+	font-weight: 100;
 	font-style: normal;
+	font-display: swap;
+}
 
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/opensans-variablefont_wdthwght-webfont.woff2') format('woff2'),
+			 url('../fonts/opensans-variablefont_wdthwght-webfont.woff') format('woff');
+	font-stretch: 100%;
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/opensans-variablefont_wdthwght-webfont.woff2') format('woff2'),
+			 url('../fonts/opensans-variablefont_wdthwght-webfont.woff') format('woff');
+	font-stretch: 100%;
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
 }

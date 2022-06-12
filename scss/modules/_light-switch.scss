@@ -10,13 +10,13 @@
 		inset 1.5px 5px 4.5px rgba(0, 0, 0, 0.101),
 		inset 2px 5.1px 5.5px rgba(0, 0, 0, 0.14)
 	;
-
 	border-radius: 32px;
 	width: 81px;
 	height: 48px;
 	border: none;
 	position: relative;
 	@include padding(1px 4px);
+	overflow: hidden;
 
 	.status-icon {
 		background-color: #fff;
