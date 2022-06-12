@@ -1,5 +1,8 @@
 .main-nav {
 	.nav-item {
+		display: flex;
+		align-items: center;
+
 		.nav-link {
 			text-transform: uppercase;
 			letter-spacing: 0.08em;
