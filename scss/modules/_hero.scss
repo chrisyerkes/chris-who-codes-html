@@ -1,0 +1,6 @@
+.hero {
+	position: relative;
+	z-index: 50;
+	background: linear-gradient(281.84deg, #D3DCE3 0%, #ECF1F5 100%);
+	@include rfs(146px, padding-top);
+}

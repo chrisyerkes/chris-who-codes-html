@@ -1,0 +1,7 @@
+#main-header {
+	z-index: 100;
+
+	& > nav {
+		@include rfs(60px, padding-top);
+	}
+}
