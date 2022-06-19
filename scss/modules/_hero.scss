@@ -15,4 +15,22 @@
 		line-height: 1.45;
 		@include rfs(35px, margin-bottom);
 	}
+	.hero-left {
+		@include rfs(80px, padding-bottom);
+	}
+	.hero-right {
+		z-index: 50;
+		position: relative;
+
+		img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			max-width: calc(100% - 15px);
+
+			@include media-breakpoint-up(xxl) {
+				max-width: calc(100% - 65px);
+			}
+		}
+	}
 }
