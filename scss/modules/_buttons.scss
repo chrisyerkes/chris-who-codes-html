@@ -20,14 +20,16 @@
 			}
 		}
 		&.has-gradient-1 {
-			background: linear-gradient(to right, rgba(42,245,152,1), rgba(8,174,234,1)), linear-gradient(to right, rgba(8,174,234,1), rgba(42,245,152,1));
+			border-radius: 0;
+			background: linear-gradient(to right, rgba(42,245,152,1), rgba(8,174,234,1)), linear-gradient(to right, rgba(200, 80, 192, 1), rgba(65,88,208,1));
 			background-size: 100% 4px, 0 4px;
 			background-position: 100% 100%, 0 100%;
 			background-repeat: no-repeat;
-			transition: background-size 400ms, background-position 400ms;
+			transition: background-size 250ms ease-in;
+			will-change: background-size;
 
 			&:hover {
-				background-size: 40% 8px, 60% 8px;
+				background-size: 0% 4px, 100% 4px;
 				color: $btn-link-color;
 			}
 			.svg-inline--fa {
