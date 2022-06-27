@@ -1,0 +1,42 @@
+.work-grid {
+	.work-item {
+		.card {
+			position: relative;
+			background-color: #fff;
+			box-shadow:
+				0.3px 0.7px 1.1px rgba(46, 52, 68, 0.036),
+				1.1px 2.2px 3.6px rgba(46, 52, 68, 0.084),
+				1.8px 9px 16px rgba(46, 52, 68, 0.12);
+			transition: box-shadow 0.25s, transform 0.25s;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 8px;
+			}
+		}
+		&:nth-child(4n + 1) {
+			.card::before {
+				@include gradient-x($dark-blue, $magenta);
+			}
+		}
+		&:nth-child(4n + 2) {
+			.card::before {
+				@include gradient-x($dark-cyan, $light-blue);
+			}
+		}
+		&:nth-child(4n + 3) {
+			.card::before {
+				@include gradient-x($cyan, $teal);
+			}
+		}
+		&:nth-child(4n + 4) {
+			.card::before {
+				@include gradient-x($yellow, $dark-magenta);
+			}
+		}
+	}
+}

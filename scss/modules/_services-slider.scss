@@ -62,7 +62,7 @@
 				color: #fff;
 				@include rfs(100%, border-radius);
 				@include rfs(28px, margin-bottom);
-				background: linear-gradient(360deg, #2E3444 -4.55%, #414B66 100%);
+				background: linear-gradient(360deg, $body-color -4.55%, $darkened-body-color 100%);
 				box-shadow:
 					0px 0.3px 1px rgba(0, 0, 0, 0.182),
 					0px 2px 3.4px rgba(0, 0, 0, 0.168),
@@ -89,22 +89,22 @@
 			}
 			&:nth-child(4n + 1) {
 				.card {
-					background: linear-gradient(90deg, rgba(8,174,234,1) 0%, rgba(42,245,152,1) 100%);
+					@include gradient-x($cyan, $teal);
 				}
 			}
 			&:nth-child(4n + 2) {
 				.card {
-					background: linear-gradient(90deg, rgba(251,218,97,1) 0%, rgba(255,90,205,1) 100%);
+					@include gradient-x($yellow, $magenta);
 				}
 			}
 			&:nth-child(4n + 3) {
 				.card {
-					background: linear-gradient(90deg, rgba(0,219,222,1) 0%, rgba(0,147,233,1) 100%);
+					@include gradient-x($light-blue, $dark-cyan);
 				}
 			}
 			&:nth-child(4n + 4) {
 				.card {
-					background: linear-gradient(90deg, rgba(65,88,208,1) 0%, rgba(200,80,192,1) 100%);
+					@include gradient-x($dark-blue, $dark-magenta);
 				}
 			}
 			&:last-child {

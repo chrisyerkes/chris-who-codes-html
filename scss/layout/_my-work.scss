@@ -1,0 +1,20 @@
+.my-work {
+	position: relative;
+	@include rfs(90px, padding-bottom);
+	background: linear-gradient(323.73deg, $bg-color-1 0.48%, $bg-color-2 100%);
+
+	&::before {
+		content: '';
+		width: 100%;
+		height: 290px;
+		background-color: #fff;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
+	& > .container {
+		position: relative;
+		z-index: 1;
+	}
+}

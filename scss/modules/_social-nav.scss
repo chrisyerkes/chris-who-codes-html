@@ -72,28 +72,28 @@
 		&.linkedin {
 			.nav-link {
 				&::before {
-					background: linear-gradient(349.08deg, #2AF598 -9.77%, #08AEEA 109.47%);
+					background: linear-gradient(349.08deg, $teal -9.77%, $cyan 109.47%);
 				}
 			}
 		}
 		&.github {
 			.nav-link {
 				&::before {
-					background: linear-gradient(46.08deg, #FBDA61 -35.85%, #FF5ACD 137.74%);
+					background: linear-gradient(46.08deg, $yellow -35.85%, $magenta 137.74%);
 				}
 			}
 		}
 		&.codepen {
 			.nav-link {
 				&::before {
-					background: linear-gradient(232.43deg, #4158D0 -42.66%, #C850C0 147.84%);
+					background: linear-gradient(232.43deg, $dark-blue -42.66%, $dark-magenta 147.84%);
 				}
 			}
 		}
 		&.twitter {
 			.nav-link {
 				&::before {
-					background: linear-gradient(227.2deg, #0093E9 -39.42%, #00DBDE 133.65%);
+					background: linear-gradient(227.2deg, $dark-cyan -39.42%, $light-blue 133.65%);
 				}
 			}
 		}
