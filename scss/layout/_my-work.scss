@@ -1,7 +1,6 @@
 .my-work {
 	position: relative;
 	@include rfs(90px, padding-bottom);
-	background: linear-gradient(323.73deg, $bg-color-1 0.48%, $bg-color-2 100%);
 
 	&::before {
 		content: '';

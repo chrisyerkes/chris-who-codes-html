@@ -1,0 +1,34 @@
+.contact-form {
+	@include padding-top(117px);
+	@include padding-bottom(150px);
+
+	.contact-photo {
+		img {
+			@include border-radius(100%);
+		}
+	}
+	.form-container {
+		.form-switch {
+			padding-left: 3em;
+
+			.form-check-input {
+				width: 2.5em;
+				height: 1.5em;
+				margin-left: -3em;
+				cursor: pointer;
+			}
+			.form-check-label {
+				@include padding-top(3px);
+			}
+		}
+		.form-check {
+			min-height: 2rem;
+		}
+		.form-floating {
+			& > .form-control,
+			& > label {
+				padding-left: 1rem;
+			}
+		}
+	}
+}

@@ -25,7 +25,7 @@
 		}
 		&.has-gradient-1 {
 			border-radius: 0;
-			background: linear-gradient(to right, $teal, $light-blue), linear-gradient(to right, $magenta, $dark-blue);
+			background-image: linear-gradient(to right, $teal, $light-blue), linear-gradient(to right, $magenta, $dark-blue);
 			background-size: 100% 4px, 0 4px;
 			background-position: 100% 100%, 0 100%;
 			background-repeat: no-repeat;
@@ -54,6 +54,7 @@
 			1.1px 2.2px 3.6px rgba(46, 52, 68, 0.084),
 			1.8px 9px 16px rgba(46, 52, 68, 0.22);
 		
+		
 		transition: box-shadow 0.25s, transform 0.25s, background-size 0.5s, background-size 0.5s;
 		
 		&:hover {
@@ -65,7 +66,19 @@
 		}
 		&.has-btn-gradient-1 {
 			color: #fff;
-			background: linear-gradient(83.1deg, $dark-magenta 0%, $dark-blue 100%), linear-gradient(83.1deg, $dark-blue 0%, $dark-magenta 100%);
+			background-image: linear-gradient(83.1deg, $dark-magenta 0%, $dark-blue 100%), linear-gradient(83.1deg, $dark-blue 0%, $dark-magenta 100%);
+			background-size: 100% 100%, 0% 100%;
+			background-position: 100% 100%, 0 100%;
+			background-repeat: no-repeat;
+
+			&:hover {
+				background-size: 0% 100%, 100% 100%;
+				background-position: 0% 100%, 100% 100%;
+			}
+		}
+		&.has-btn-gradient-2 {
+			color: #fff;
+			background-image: linear-gradient(83.1deg, $dark-cyan 0%, $cyan 100%), linear-gradient(83.1deg, $dark-cyan 0%, $cyan 100%);
 			background-size: 100% 100%, 0% 100%;
 			background-position: 100% 100%, 0 100%;
 			background-repeat: no-repeat;
