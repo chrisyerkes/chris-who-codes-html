@@ -24,6 +24,8 @@ $dark-magenta: #C850C0;
 $dark-blue: #4158D0;
 $body-color: #2E3444;
 $darkened-body-color: #414B66;
+// General
+$link-hover-color: $cyan;
 // Content Section BG
 $bg-color-1: #D3DCE3;
 $bg-color-2: #ECF1F5;
@@ -46,3 +48,6 @@ $form-check-input-focus-box-shadow: 0 0 0 0.25rem rgba($cyan,25%);
 $form-check-input-checked-bg-color: $dark-cyan;
 $form-check-input-checked-border-color: $dark-cyan;
 $form-switch-focus-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$cyan}' opacity='.5' /></svg>");
+// Footer
+$footer-bg-1: #414B66;
+$footer-bg-2: #2E3444;

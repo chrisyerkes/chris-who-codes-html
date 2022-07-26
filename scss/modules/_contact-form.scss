@@ -2,19 +2,26 @@
 	@include padding-top(117px);
 	@include padding-bottom(150px);
 
+	.section-title {
+		@include margin-bottom(83px);
+	}
 	.contact-photo {
+		p {
+			@include margin-bottom(22px);
+		}
 		img {
+			// max-width: 300px;
 			@include border-radius(100%);
 		}
 	}
 	.form-container {
 		.form-switch {
-			padding-left: 3em;
+			padding-left: 3.25em;
 
 			.form-check-input {
 				width: 2.5em;
 				height: 1.5em;
-				margin-left: -3em;
+				margin-left: -3.25em;
 				cursor: pointer;
 			}
 			.form-check-label {
