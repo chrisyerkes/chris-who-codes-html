@@ -22,15 +22,15 @@
 		z-index: 50;
 		position: relative;
 
-		img {
-			position: absolute;
-			top: 0;
-			right: 0;
-			max-width: calc(100% - 15px);
+		// img {
+		// 	position: absolute;
+		// 	top: 0;
+		// 	right: 0;
+		// 	max-width: calc(100% - 15px);
 
-			@include media-breakpoint-up(xxl) {
-				max-width: calc(100% - 65px);
-			}
-		}
+		// 	@include media-breakpoint-up(xxl) {
+		// 		max-width: calc(100% - 65px);
+		// 	}
+		// }
 	}
 }

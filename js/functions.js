@@ -30,6 +30,11 @@ document.addEventListener(
 				},
 			},
 		});
+		const animationToggle = document.querySelector('.animation-toggle');
+		const animation = document.querySelector('.chris-animated-container');
+		animationToggle.addEventListener('click', function () {
+			animation.classList.toggle('animating');
+		});
 	},
 	false
 );
