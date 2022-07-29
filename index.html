@@ -19,7 +19,7 @@
 	</head>
 	<body>
 		<header class="position-absolute w-100 top-0 start-0" id="main-header">
-			<nav class="navbar navbar-expand-lg">
+			<nav class="navbar navbar-expand-md">
 				<div class="container">
 					<button
 						class="navbar-toggler"
@@ -33,7 +33,7 @@
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="collapse navbar-collapse" id="navbarNav">
-						<ul class="navbar-nav ms-auto main-nav">
+						<ul class="navbar-nav mx-auto mx-lg-0 ms-lg-auto main-nav">
 							<li class="nav-item">
 								<a
 									class="nav-link active"
@@ -51,7 +51,7 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#">Contact</a>
 							</li>
-							<li class="nav-item d-flex align-items-center">
+							<li class="nav-item d-flex align-items-center light-switch-wrap">
 								<button class="light-switch">
 									<span class="status-icon">
 										<i class="fa-regular fa-sun"></i>
@@ -66,129 +66,130 @@
 		</header>
 		<section class="content-section hero">
 			<div class="container">
-				<div class="row">
-					<div class="col-7 hero-left">
-						<div class="row social-row">
-							<div class="col">
-								<svg
-									version="1.1"
-									xmlns="http://www.w3.org/2000/svg"
-									class="svg-settings"
+				<div class="row social-row">
+					<div class="col">
+						<svg
+							version="1.1"
+							xmlns="http://www.w3.org/2000/svg"
+							class="svg-settings"
+						>
+							<defs>
+								<linearGradient
+									id="linear-green-blue"
+									gradientTransform="rotate(90)"
+									x1="0%"
+									y1="0%"
+									x2="100%"
+									y2="0%"
 								>
-									<defs>
-										<linearGradient
-											id="linear-green-blue"
-											gradientTransform="rotate(90)"
-											x1="0%"
-											y1="0%"
-											x2="100%"
-											y2="0%"
-										>
-											<stop
-												class="linear-stop1"
-												offset="0%"
-											></stop>
-											<stop
-												class="linear-stop2"
-												offset="100%"
-											></stop>
-										</linearGradient>
-										<linearGradient
-											id="linear-yellow-pink"
-											gradientTransform="rotate(110)"
-											x1="0%"
-											y1="0%"
-											x2="100%"
-											y2="0%"
-										>
-											<stop
-												class="linear-stop1"
-												offset="0%"
-											></stop>
-											<stop
-												class="linear-stop2"
-												offset="100%"
-											></stop>
-										</linearGradient>
-										<linearGradient
-											id="linear-pink-blue"
-											gradientTransform="rotate(110)"
-											x1="0%"
-											y1="0%"
-											x2="100%"
-											y2="0%"
-										>
-											<stop
-												class="linear-stop1"
-												offset="0%"
-											></stop>
-											<stop
-												class="linear-stop2"
-												offset="100%"
-											></stop>
-										</linearGradient>
-										<linearGradient
-											id="linear-teal-blue"
-											gradientTransform="rotate(110)"
-											x1="0%"
-											y1="0%"
-											x2="100%"
-											y2="0%"
-										>
-											<stop
-												class="linear-stop1"
-												offset="0%"
-											></stop>
-											<stop
-												class="linear-stop2"
-												offset="100%"
-											></stop>
-										</linearGradient>
-									</defs>
-								</svg>
-								<ul class="nav social-nav">
-									<li class="nav-item linkedin">
-										<a href="#" class="nav-link">
-											<i class="fab fa-linkedin-in"></i>
-										</a>
-									</li>
-									<li class="nav-item github">
-										<a href="#" class="nav-link">
-											<i class="fa-brands fa-github"></i>
-										</a>
-									</li>
-									<li class="nav-item codepen">
-										<a href="#" class="nav-link">
-											<i class="fa-brands fa-codepen"></i>
-										</a>
-									</li>
-									<li class="nav-item twitter">
-										<a href="#" class="nav-link">
-											<i class="fab fa-twitter"></i>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
+									<stop
+										class="linear-stop1"
+										offset="0%"
+									></stop>
+									<stop
+										class="linear-stop2"
+										offset="100%"
+									></stop>
+								</linearGradient>
+								<linearGradient
+									id="linear-yellow-pink"
+									gradientTransform="rotate(110)"
+									x1="0%"
+									y1="0%"
+									x2="100%"
+									y2="0%"
+								>
+									<stop
+										class="linear-stop1"
+										offset="0%"
+									></stop>
+									<stop
+										class="linear-stop2"
+										offset="100%"
+									></stop>
+								</linearGradient>
+								<linearGradient
+									id="linear-pink-blue"
+									gradientTransform="rotate(110)"
+									x1="0%"
+									y1="0%"
+									x2="100%"
+									y2="0%"
+								>
+									<stop
+										class="linear-stop1"
+										offset="0%"
+									></stop>
+									<stop
+										class="linear-stop2"
+										offset="100%"
+									></stop>
+								</linearGradient>
+								<linearGradient
+									id="linear-teal-blue"
+									gradientTransform="rotate(110)"
+									x1="0%"
+									y1="0%"
+									x2="100%"
+									y2="0%"
+								>
+									<stop
+										class="linear-stop1"
+										offset="0%"
+									></stop>
+									<stop
+										class="linear-stop2"
+										offset="100%"
+									></stop>
+								</linearGradient>
+							</defs>
+						</svg>
+						<ul class="nav social-nav justify-content-end d-md-none d-lg-flex justify-content-lg-start">
+							<li class="nav-item linkedin">
+								<a href="#" class="nav-link">
+									<i class="fab fa-linkedin-in"></i>
+								</a>
+							</li>
+							<li class="nav-item github">
+								<a href="#" class="nav-link">
+									<i class="fa-brands fa-github"></i>
+								</a>
+							</li>
+							<li class="nav-item codepen">
+								<a href="#" class="nav-link">
+									<i class="fa-brands fa-codepen"></i>
+								</a>
+							</li>
+							<li class="nav-item twitter">
+								<a href="#" class="nav-link">
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row row-cols-1 row-cols-lg-2 align-items-center">
+					<div class="col-lg-7 order-last order-lg-first hero-left">
 						<div class="row">
 							<div class="col">
-								<h1 class="hero-title animation-toggle">Chris Yerkes</h1>
+								<h1 class="d-none d-lg-block hero-title animation-toggle">Chris Yerkes</h1>
 								<p class="hero-subtitle">
 									Front end developer specializing in lorem
 									ipsum. I enjoy creating dolor sit amet and
 									experimenting with felis faucibus.
 								</p>
-								<a
+								<p class="m-0 text-center text-lg-start"><a
 									href="#"
 									class="btn btn-link has-arrow-right has-gradient-1"
 								>
 									Get in Touch
 									<i class="fa-solid fa-arrow-right"></i>
-								</a>
+								</a></p>
 							</div>
 						</div>
 					</div>
-					<div class="col hero-right">
+					<div class="col-lg-5 hero-right">
+						<p class="h1 d-lg-none hero-title text-center">Chris Yerkes</p>
 						<div class="chris-animated-container">
 							<div class="sfx sfx-clack-single">
 								<img src="images/sprites/sfx_clack_single.png" alt="Keyboard clack sound effect">
@@ -208,6 +209,28 @@
 							<div class="pug pug-henry"></div>
 							<div class="pug pug-peppa"></div>
 						</div>
+						<ul class="nav social-nav d-none d-md-flex d-lg-none justify-content-center">
+							<li class="nav-item linkedin">
+								<a href="#" class="nav-link">
+									<i class="fab fa-linkedin-in"></i>
+								</a>
+							</li>
+							<li class="nav-item github">
+								<a href="#" class="nav-link">
+									<i class="fa-brands fa-github"></i>
+								</a>
+							</li>
+							<li class="nav-item codepen">
+								<a href="#" class="nav-link">
+									<i class="fa-brands fa-codepen"></i>
+								</a>
+							</li>
+							<li class="nav-item twitter">
+								<a href="#" class="nav-link">
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -524,9 +547,12 @@
 				</div>
 				<div class="row">
 					<div class="col text-center">
-						<a href="#" class="btn btn-gradient has-btn-gradient-1">
-							View All Projects
-						</a>
+						<p class="rgb-button-wrap">
+							<a href="#" class="btn btn-gradient has-btn-gradient-1">
+								View All Projects
+							</a>
+							<span></span>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -726,12 +752,15 @@
 											(optional)
 										</label>
 									</div>
-									<button
-										type="submit"
-										class="btn btn-gradient has-btn-gradient-2"
-									>
-										Send a message
-									</button>
+									<p class="rgb-button-wrap">
+										<button
+											type="submit"
+											class="btn btn-gradient has-btn-gradient-2"
+										>
+											Send a message
+										</button>
+										<span></span>
+									</p>
 								</div>
 							</div>
 						</form>

@@ -2,8 +2,11 @@
 	position: relative;
 	z-index: 50;
 	background: linear-gradient(281.84deg, $bg-color-1 0%, $bg-color-2 100%);
-	@include rfs(192px, padding-top);
+	@include padding-top(192px);
 
+	@include media-breakpoint-down(md) {
+		@include padding-top(60px);
+	}
 	.hero-title {
 		@include font-size(96px);
 		line-height: 1.1;
@@ -21,7 +24,11 @@
 	.hero-right {
 		z-index: 50;
 		position: relative;
+		@include rfs(80px, padding-bottom);
 
+		@include media-breakpoint-down(lg) {
+			padding-bottom: 0;
+		}
 		// img {
 		// 	position: absolute;
 		// 	top: 0;
