@@ -129,13 +129,19 @@
 	}
 	&.text-links {
 		font-weight: $font-weight-bold;
-		max-width: 85%;
 		margin-left: auto;
 		margin-right: auto;
 
+		@include media-breakpoint-up(lg) {
+			max-width: 85%;
+		}
+		@include media-breakpoint-only(sm) {
+			max-width: 50%;
+		}
 		.nav-item {
-			width: 50%;
-
+			@include media-breakpoint-up(sm) {
+				width: 50%;
+			}
 			.nav-link {
 				padding-left: 0;
 				padding-right: 0;

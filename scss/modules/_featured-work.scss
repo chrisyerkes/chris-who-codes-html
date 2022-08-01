@@ -23,15 +23,29 @@
 			0.9px 2.7px 6.7px rgba(0, 0, 0, 0.095),
 			4px 12px 30px rgba(0, 0, 0, 0.28);
 	}
+	.featured-work-image {
+		@include media-breakpoint-down(xl) {
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: left top;
+			}
+		}
+	}
 	.featured-work-description {
-		min-width: 420px;
 		color: #fff;
 		background: linear-gradient(217.44deg, $body-color 0%, $body-color 0.01%, $darkened-body-color 100%);
 		padding: rfs-fluid-value(40px) rfs-fluid-value(70px) rfs-fluid-value(40px) rfs-fluid-value(29px);
 		@include font-size(20px);
 		
-		& > *:last-child {
-			margin-bottom: 0;
+		@include media-breakpoint-up(lg) {
+			min-width: 420px;
+		}
+		& > .description-wrapper > *:last-child {
+			@include media-breakpoint-down(lg) {
+				margin-bottom: 0;
+			}
 		}
 		.btn-link {
 			color: #fff;

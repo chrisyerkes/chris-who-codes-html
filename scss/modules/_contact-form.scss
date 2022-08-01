@@ -10,8 +10,18 @@
 			@include margin-bottom(22px);
 		}
 		img {
-			// max-width: 300px;
 			@include border-radius(100%);
+
+			@include media-breakpoint-down(md) {
+				max-width: 300px;
+				margin-left: auto;
+				margin-right: auto;
+				@include margin-bottom(30px);
+				display: block;
+			}
+			@include media-breakpoint-only(xs) {
+				max-width: 100%;
+			}
 		}
 	}
 	.form-container {
@@ -35,6 +45,12 @@
 			& > .form-control,
 			& > label {
 				padding-left: 1rem;
+			}
+		}
+		@include media-breakpoint-down(md) {
+			.rgb-button-wrap {
+				left: 50%;
+				transform: translateX(-50%);
 			}
 		}
 	}
