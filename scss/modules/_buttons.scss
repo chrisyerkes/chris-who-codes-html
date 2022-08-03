@@ -1,5 +1,7 @@
 .btn {
-	position: relative;
+	&:not(.stretched-link) {
+		position: relative;
+	}
 
 	&.btn-link {
 		@include font-size(24px);

@@ -30,6 +30,7 @@ document.addEventListener(
 				},
 			},
 		});
+		// Hero animation
 		const animation = document.querySelector('.chris-animated-container');
 		// animation check script
 		// const animationToggle = document.querySelector('.animation-toggle');
@@ -70,8 +71,20 @@ document.addEventListener(
 				}, num);
 			}, animLength);
 		};
-		// Initial call of the function to start the animation sequence
+		// Initial call of the function to start the hero animation sequence
 		randomAnimation(1000, 10000);
+		// Animated portrait
+		const portrait = document.querySelector('.contact-photo');
+		portrait.addEventListener('click', (e) => {
+			e.preventDefault();
+			let portraitWrap = portrait.querySelector('.portrait-wrap');
+			let portraitWidth = portraitWrap.offsetWidth;
+			let portraitHeight = portraitWrap.offsetHeight;
+			portrait.style.paddingTop = portraitHeight + 22 + 'px';
+			portraitWrap.style.width = portraitWidth + 'px';
+			portraitWrap.style.height = portraitHeight + 'px';
+			portrait.classList.toggle('animated');
+		});
 	},
 	false
 );

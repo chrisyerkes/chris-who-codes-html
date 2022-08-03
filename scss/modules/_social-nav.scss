@@ -4,15 +4,43 @@
 
 		.nav-item {
 			@include rfs(16px, margin-right);
-
+			border-radius: 100%;
+			position: relative;
+			transition: box-shadow 0.25s, transform 0.25s;
+			
+			&::before,
+			&::after {
+				opacity: 0;
+				content: '';
+				position: absolute;
+				top: 50%;
+				border-radius: 50%;
+				width: 50%;
+				height: 50%;
+				z-index: 1;
+				transition: opacity 0.75s;
+				transform: translateY(-50%);
+				animation: socialgradientbg 2s linear infinite;
+			}
+			&::before {
+				background: #ff3b8d;
+				left: -5px;
+				box-shadow: 17px 15px 0 #07b2ff;
+			}
+			&::after {
+				background: #8dff08;
+				right: -5px;
+				box-shadow: -17px -15px 0 #ffeb3b;
+			}
 			.nav-link {
 				@include font-size(24px);
-				background-color: #fff;
+				// background-color: #fff;
 				width: 48px;
 				height: 48px;
 				border-radius: 100%;
 				// border: 4px solid;
 				position: relative;
+				z-index: 50;
 
 				&::before {
 					content: '';
@@ -36,7 +64,7 @@
 					left: 50%;
 					transform: translate(-50%, -50%);
 					z-index: 1;
-					transition: 0.25s opacity;
+					transition: 0.5s opacity;
 				}
 				.svg-inline--fa {
 					position: absolute;
@@ -45,9 +73,9 @@
 					transform: translate(calc(-50% + .5px), calc(-50% + 1px));
 					z-index: 50;
 
-					path {
-						transition: 0.25s fill;
-					}
+					// path {
+					// 	transition: 0.5s all;
+					// }
 					&.fa-linkedin-in path {
 						fill: url(#linear-green-blue);
 					}
@@ -101,6 +129,18 @@
 			&:last-child {
 				margin-right: 0;
 			}
+			&:hover {
+				transform: translate3d(0, -3px, 0);
+				box-shadow: 0px 0.8px 2px rgba(46, 52, 68, 0.065),
+					0px 2.7px 6.7px rgba(46, 52, 68, 0.095),
+					0px 12px 20px rgba(46, 52, 68, 0.28);
+
+				&::before,
+				&::after {
+					opacity: 1;
+				}
+			}
+						
 		}
 	}
 	&.white-social-nav {
@@ -118,10 +158,20 @@
 					border: 3px solid white;
 					width: 100%;
 					height: 100%;
+					transition: 0.5s border-color;
 				}
 				.svg-inline--fa {
 					path {
 						fill: #fff !important;
+					}
+				}
+				&:hover {
+					&::after {
+						display: block;
+						opacity: 1;
+						background-color: rgba(white, .25) !important;
+						border-color: transparent;
+						transition: 0.5s border-color, 0.5s background-color;
 					}
 				}
 			}
@@ -147,5 +197,15 @@
 				padding-right: 0;
 			}
 		}
+	}
+}
+
+@keyframes socialgradientbg {
+	0% {
+		filter: blur(13px) hue-rotate(0deg);
+	}
+
+	100% {
+		filter: blur(13px) hue-rotate(360deg);
 	}
 }
