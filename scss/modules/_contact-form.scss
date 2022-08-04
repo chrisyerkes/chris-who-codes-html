@@ -6,12 +6,44 @@
 		@include margin-bottom(83px);
 	}
 	.contact-photo {
+		position: relative;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			z-index: 50;
+		}
+		&::before {
+			width: calc(100% - ((var(--bs-gutter-x) * 0.5) * 2));
+			padding-top: calc(100% - ((var(--bs-gutter-x) * 0.5) * 2) - 6px);
+			border: 3px dashed tint-color($darkened-body-color, 75%);
+			left: 50%;
+			transform: translateX(-50%);
+			border-radius: 100%;
+		}
+		&::after {
+			content: 'Take me home!';
+			left: 50%;
+			@include font-size(30px);
+			line-height: 1.2;
+			font-weight: $font-weight-extra-bold;
+			text-align: center;
+			text-transform: uppercase;
+			transform: translate(-50%);
+			padding-top: calc((100% - ((var(--bs-gutter-x) * 0.5) * 2)) / 2 - 30px);
+			animation: textrgb 2s infinite;
+			color: red;
+		}
 		p {
+			// opacity: 0;
 			position: relative;
 			border-radius: 100%;
 			@include margin-bottom(22px);
 			transition: box-shadow 0.25s, transform 0.25s, top .75s linear, left .75s linear;
 			cursor: pointer;
+			z-index: 100;
 
 			&::before,
 			&::after {
@@ -154,5 +186,13 @@
 	}
 	100% {
 		transform: translate(0, 0);
+	}
+}
+@keyframes textrgb {
+	0% {
+		filter: hue-rotate(0deg);
+	}
+	100% {
+		filter: hue-rotate(360deg);
 	}
 }
