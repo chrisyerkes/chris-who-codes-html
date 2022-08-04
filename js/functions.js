@@ -77,13 +77,23 @@ document.addEventListener(
 		const portrait = document.querySelector('.contact-photo');
 		portrait.addEventListener('click', (e) => {
 			e.preventDefault();
-			let portraitWrap = portrait.querySelector('.portrait-wrap');
-			let portraitWidth = portraitWrap.offsetWidth;
-			let portraitHeight = portraitWrap.offsetHeight;
+			let portraitWrap = portrait.querySelector('.portrait-wrap'),
+				portraitWidth = portraitWrap.offsetWidth,
+				portraitHeight = portraitWrap.offsetHeight,
+				portraitLeft = portrait.getBoundingClientRect().left + 12,
+				portraitTop = portrait.getBoundingClientRect().top;
 			portrait.style.paddingTop = portraitHeight + 22 + 'px';
 			portraitWrap.style.width = portraitWidth + 'px';
 			portraitWrap.style.height = portraitHeight + 'px';
-			portrait.classList.toggle('animated');
+			portraitWrap.style.left = portraitLeft + 'px';
+			portraitWrap.style.top = portraitTop + 'px';
+			portrait.classList.add('loading');
+			setTimeout(() => {
+				portrait.classList.add('loaded');
+				setTimeout(() => {
+					portrait.classList.add('animated');
+				}, 750);
+			}, 100);
 		});
 	},
 	false

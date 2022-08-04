@@ -10,7 +10,7 @@
 			position: relative;
 			border-radius: 100%;
 			@include margin-bottom(22px);
-			transition: box-shadow 0.25s, transform 0.25s;
+			transition: box-shadow 0.25s, transform 0.25s, top .75s linear, left .75s linear;
 			cursor: pointer;
 
 			&::before,
@@ -55,12 +55,20 @@
 				}
 			}
 		}
-		&.animated {
+		&.loading {
 			p {
 				position: fixed;
-				left: 0;
-				top: 0;
 				z-index: 1000;
+			}
+		}
+		&.loaded {
+			p {
+				left: 0 !important;
+				top: 0 !important;
+			}
+		}
+		&.animated {
+			p {
 				animation: bounce 10s linear infinite;
 			}
 		}
