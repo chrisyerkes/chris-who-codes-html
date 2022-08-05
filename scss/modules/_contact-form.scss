@@ -37,11 +37,11 @@
 			color: red;
 		}
 		p {
-			// opacity: 0;
+			opacity: 1;
 			position: relative;
 			border-radius: 100%;
 			@include margin-bottom(22px);
-			transition: box-shadow 0.25s, transform 0.25s, top .75s linear, left .75s linear;
+			transition: box-shadow 0.25s, transform 0.25s, top .75s linear, left .75s linear, opacity .5s;
 			cursor: pointer;
 			z-index: 100;
 
@@ -102,6 +102,11 @@
 		&.animated {
 			p {
 				animation: bounce 10s linear infinite;
+			}
+		}
+		&.closing {
+			p {
+				opacity: 0;
 			}
 		}
 		img {

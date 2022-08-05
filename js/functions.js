@@ -2,6 +2,14 @@
 document.addEventListener(
 	'DOMContentLoaded',
 	function (event) {
+		// Light/dark mode toggle
+		const lightswitch = document.querySelector('.light-switch');
+		lightswitch.addEventListener('click', (e) => {
+			e.preventDefault();
+			document.body.classList.toggle('dark-mode');
+			lightswitch.classList.toggle('active');
+			lightswitch.classList.toggle('off');
+		});
 		// Flickity Slider
 		const services = document.querySelector('.services-slider');
 		const servicesSlider = new Flickity(services, {
@@ -75,6 +83,8 @@ document.addEventListener(
 		randomAnimation(1000, 10000);
 		// Animated portrait
 		const portrait = document.querySelector('.contact-photo');
+		const overlay = document.querySelector('.overlay');
+		// Start the animation when the user clicks on the portrait
 		portrait.addEventListener('click', (e) => {
 			e.preventDefault();
 			let portraitWrap = portrait.querySelector('.portrait-wrap'),
@@ -82,18 +92,47 @@ document.addEventListener(
 				portraitHeight = portraitWrap.offsetHeight,
 				portraitLeft = portrait.getBoundingClientRect().left + 12,
 				portraitTop = portrait.getBoundingClientRect().top;
+			// Add's class that turns on invisible overlay that is used to toggle off animation
+			overlay.classList.add('active');
+			// Creating space that the portrait was in now that it's set to position fixed
 			portrait.style.paddingTop = portraitHeight + 22 + 'px';
 			portraitWrap.style.width = portraitWidth + 'px';
 			portraitWrap.style.height = portraitHeight + 'px';
 			portraitWrap.style.left = portraitLeft + 'px';
 			portraitWrap.style.top = portraitTop + 'px';
+			// Add class to move to starting point of css animation
 			portrait.classList.add('loading');
 			setTimeout(() => {
+				// Adding class to prepare for css animation
 				portrait.classList.add('loaded');
 				setTimeout(() => {
+					// Adding class that turns on css animation
 					portrait.classList.add('animated');
 				}, 750);
 			}, 100);
+		});
+		// Stop the animation when the user clicks on the overlay
+		overlay.addEventListener('click', (e) => {
+			e.preventDefault();
+			let portraitWrap = portrait.querySelector('.portrait-wrap');
+			// Removing class that turns on invisible overlay that is used to toggle off animation
+			overlay.classList.remove('active');
+			portrait.classList.add('closing');
+			setTimeout(() => {
+				// Resetting inline CSS styles
+				portrait.style.paddingTop = '';
+				portraitWrap.style.width = '';
+				portraitWrap.style.height = '';
+				portraitWrap.style.left = '';
+				portraitWrap.style.top = '';
+				// Removing class that turns on css animation
+				portrait.classList.remove('animated');
+				// Removing class that prepares for css animation
+				portrait.classList.remove('loaded');
+				// Removing class that moves to starting point of css animation
+				portrait.classList.remove('loading');
+				portrait.classList.remove('closing');
+			}, 500);
 		});
 	},
 	false

@@ -1,0 +1,22 @@
+.mobile-offcanvas {
+	border: none !important;
+	backdrop-filter: blur(15px);
+	background-color: rgba(white, .7);
+	pointer-events: all;
+
+	.offcanvas-header {
+		padding: 0;
+		@include padding-top(20px);
+	}
+	.btn-close {
+		position: absolute;
+		right: 30px;
+		top: 40px;
+		z-index: 100;
+		border: none;
+		background-color: transparent;
+		@include font-size(45px);
+		line-height: 1;
+		padding: rfs-fluid-value(5px) rfs-fluid-value(10px);
+	}
+}

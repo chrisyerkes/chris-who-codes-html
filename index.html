@@ -24,7 +24,7 @@
 					<button
 						class="navbar-toggler"
 						type="button"
-						data-bs-toggle="collapse"
+						data-bs-toggle="offcanvas"
 						data-bs-target="#navbarNav"
 						aria-controls="navbarNav"
 						aria-expanded="false"
@@ -32,34 +32,56 @@
 					>
 						<span class="navbar-toggler-icon"></span>
 					</button>
-					<div class="collapse navbar-collapse" id="navbarNav">
-						<ul class="navbar-nav mx-auto mx-lg-0 ms-lg-auto main-nav">
-							<li class="nav-item">
-								<a
-									class="nav-link active"
-									aria-current="page"
-									href="#"
-									>Services</a
+					<div
+						class="offcanvas offcanvas-end mobile-offcanvas"
+						data-bs-backdrop="false"
+						data-bs-scroll="true"
+						tabindex="-1"
+						id="navbarNav"
+					>
+						<div class="offcanvas-header">
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="offcanvas"
+								aria-label="Close"
+							>
+								<i class="fa-solid fa-xmark"></i>
+							</button>
+						</div>
+						<div class="offcanvas-body">
+							<ul
+								class="navbar-nav mx-auto mx-lg-0 ms-lg-auto h-100 main-nav"
+							>
+								<li class="nav-item">
+									<a
+										class="nav-link active"
+										aria-current="page"
+										href="#"
+										>Services</a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Work</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Skills</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Contact</a>
+								</li>
+								<li
+									class="nav-item d-flex align-items-center mt-auto light-switch-wrap"
 								>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Work</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Skills</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Contact</a>
-							</li>
-							<li class="nav-item d-flex align-items-center light-switch-wrap">
-								<button class="light-switch">
-									<span class="status-icon">
-										<i class="fa-regular fa-sun"></i>
-										<i class="fa-solid fa-moon"></i>
-									</span>
-								</button>
-							</li>
-						</ul>
+									<button class="light-switch off">
+										<span class="status-icon">
+											<i class="fa-regular fa-sun"></i>
+											<i class="fa-solid fa-moon"></i>
+										</span>
+									</button>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</nav>
@@ -144,7 +166,9 @@
 								</linearGradient>
 							</defs>
 						</svg>
-						<ul class="nav social-nav justify-content-end d-md-none d-lg-flex justify-content-lg-start">
+						<ul
+							class="nav social-nav justify-content-end d-md-none d-lg-flex justify-content-lg-start"
+						>
 							<li class="nav-item linkedin">
 								<a href="#" class="nav-link">
 									<i class="fab fa-linkedin-in"></i>
@@ -172,44 +196,69 @@
 					<div class="col-lg-7 order-last order-lg-first hero-left">
 						<div class="row">
 							<div class="col">
-								<h1 class="d-none d-lg-block hero-title animation-toggle">Chris Yerkes</h1>
+								<h1
+									class="d-none d-lg-block hero-title animation-toggle"
+								>
+									Chris Yerkes
+								</h1>
 								<p class="hero-subtitle">
 									Front end developer specializing in lorem
 									ipsum. I enjoy creating dolor sit amet and
 									experimenting with felis faucibus.
 								</p>
-								<p class="m-0 text-center text-lg-start"><a
-									href="#"
-									class="btn btn-link has-arrow-right has-gradient-1"
-								>
-									Get in Touch
-									<i class="fa-solid fa-arrow-right"></i>
-								</a></p>
+								<p class="m-0 text-center text-lg-start">
+									<a
+										href="#"
+										class="btn btn-link has-arrow-right has-gradient-1"
+									>
+										Get in Touch
+										<i class="fa-solid fa-arrow-right"></i>
+									</a>
+								</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-5 hero-right">
-						<p class="h1 d-lg-none hero-title text-center">Chris Yerkes</p>
+						<p class="h1 d-lg-none hero-title text-center">
+							Chris Yerkes
+						</p>
 						<div class="chris-animated-container">
 							<div class="sfx sfx-clack-single">
-								<img src="images/sprites/sfx_clack_single.png" alt="Keyboard clack sound effect">
+								<img
+									src="images/sprites/sfx_clack_single.png"
+									alt="Keyboard clack sound effect"
+								/>
 							</div>
 							<div class="sfx sfx-clack-double">
-								<img src="images/sprites/sfx_clack_double.png" alt="Keyboard clack sound effect">
+								<img
+									src="images/sprites/sfx_clack_double.png"
+									alt="Keyboard clack sound effect"
+								/>
 							</div>
 							<div class="character character-body">
-								<img src="images/sprites/chris_body_and_pugs.png" alt="Chris and his pugs working on his laptop">
+								<img
+									src="images/sprites/chris_body_and_pugs.png"
+									alt="Chris and his pugs working on his laptop"
+								/>
 							</div>
 							<div class="character character-left-arm">
-								<img src="images/sprites/chris_arm_left.png" alt="Chris's left arm">
+								<img
+									src="images/sprites/chris_arm_left.png"
+									alt="Chris's left arm"
+								/>
 							</div>
 							<div class="character character-right-arm">
-								<img src="images/sprites/chris_arm_right.png" alt="Chris's right arm">
+								<img
+									src="images/sprites/chris_arm_right.png"
+									alt="Chris's right arm"
+								/>
 							</div>
 							<div class="pug pug-henry"></div>
 							<div class="pug pug-peppa"></div>
 						</div>
-						<ul class="nav social-nav d-none d-md-flex d-lg-none justify-content-center">
+						<ul
+							class="nav social-nav d-none d-md-flex d-lg-none justify-content-center"
+						>
 							<li class="nav-item linkedin">
 								<a href="#" class="nav-link">
 									<i class="fab fa-linkedin-in"></i>
@@ -409,7 +458,9 @@
 				<div class="row">
 					<div class="col">
 						<h2 class="section-title">View my work</h2>
-						<div class="work-wrapper d-block d-lg-flex featured-work">
+						<div
+							class="work-wrapper d-block d-lg-flex featured-work"
+						>
 							<div class="featured-work-image">
 								<img
 									src="images/fpo_featured-work.jpg"
@@ -461,7 +512,9 @@
 									scelerisque nisi eu, consectetur nisi.
 								</p>
 								<p>
-									<a href="#" class="btn stretched-link btn-link btn-link-sm"
+									<a
+										href="#"
+										class="btn stretched-link btn-link btn-link-sm"
 										>View Project
 										<i class="fa-solid fa-arrow-right"></i
 									></a>
@@ -486,7 +539,9 @@
 									scelerisque nisi eu, consectetur nisi.
 								</p>
 								<p>
-									<a href="#" class="btn stretched-link btn-link btn-link-sm"
+									<a
+										href="#"
+										class="btn stretched-link btn-link btn-link-sm"
 										>View Project
 										<i class="fa-solid fa-arrow-right"></i
 									></a>
@@ -511,7 +566,9 @@
 									scelerisque nisi eu, consectetur nisi.
 								</p>
 								<p>
-									<a href="#" class="btn stretched-link btn-link btn-link-sm"
+									<a
+										href="#"
+										class="btn stretched-link btn-link btn-link-sm"
 										>View Project
 										<i class="fa-solid fa-arrow-right"></i
 									></a>
@@ -536,7 +593,9 @@
 									scelerisque nisi eu, consectetur nisi.
 								</p>
 								<p>
-									<a href="#" class="btn stretched-link btn-link btn-link-sm"
+									<a
+										href="#"
+										class="btn stretched-link btn-link btn-link-sm"
 										>View Project
 										<i class="fa-solid fa-arrow-right"></i
 									></a>
@@ -548,7 +607,10 @@
 				<div class="row">
 					<div class="col text-center">
 						<p class="rgb-button-wrap">
-							<a href="#" class="btn btn-gradient has-btn-gradient-1">
+							<a
+								href="#"
+								class="btn btn-gradient has-btn-gradient-1"
+							>
 								View All Projects
 							</a>
 							<span></span>
@@ -639,7 +701,9 @@
 						</h2>
 					</div>
 				</div>
-				<div class="row justify-content-between flex-column-reverse flex-md-row">
+				<div
+					class="row justify-content-between flex-column-reverse flex-md-row"
+				>
 					<div class="col-md-4 col-lg-4 contact-photo">
 						<p tabindex="0" class="portrait-wrap">
 							<img
@@ -648,7 +712,9 @@
 								alt="Photo of me, Chris Yerkes"
 							/>
 						</p>
-						<ul class="nav social-nav flex-column flex-sm-row align-items-center text-links">
+						<ul
+							class="nav social-nav flex-column flex-sm-row align-items-center text-links"
+						>
 							<li class="nav-item">
 								<a href="#" class="nav-link"
 									>LinkedIn
@@ -771,14 +837,18 @@
 		<footer id="main-footer">
 			<div class="container">
 				<div class="row align-items-center">
-					<div class="col-sm-6 text-center text-sm-start mb-3 mb-sm-0">
+					<div
+						class="col-sm-6 text-center text-sm-start mb-3 mb-sm-0"
+					>
 						<p class="name">Chris Yerkes</p>
 						<p class="copyright">
 							&copy; 2022 Mops Digital, LLC. All rights reserved.
 						</p>
 					</div>
 					<div class="col-sm-6 footer-social-nav">
-						<ul class="nav justify-content-center justify-content-sm-end social-nav white-social-nav">
+						<ul
+							class="nav justify-content-center justify-content-sm-end social-nav white-social-nav"
+						>
 							<li class="nav-item linkedin">
 								<a href="#" class="nav-link">
 									<i class="fab fa-linkedin-in"></i>
@@ -801,7 +871,10 @@
 							</li>
 						</ul>
 					</div>
+				</div>
+			</div>
 		</footer>
+		<div class="overlay"></div>
 
 		<script src="js/flickity.pkgd.min.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>

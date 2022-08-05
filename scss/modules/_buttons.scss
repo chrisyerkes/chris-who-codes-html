@@ -1,4 +1,7 @@
 .btn {
+	&:focus {
+		outline: -webkit-focus-ring-color auto 1px;
+	}
 	&:not(.stretched-link) {
 		position: relative;
 	}
@@ -129,7 +132,8 @@
 		right: -15px;
 		box-shadow: -30px -20px 0 #ffeb3b;
 	}
-	&:hover {
+	&:hover,
+	&:active {
 		span,
 		span::before,
 		span::after {

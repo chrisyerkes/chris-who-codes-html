@@ -18,6 +18,10 @@
 	@include padding(1px 4px);
 	overflow: hidden;
 
+	@include media-breakpoint-down(md) {
+		@include margin-left(15px);
+		@include margin-bottom(30px);
+	}
 	.status-icon {
 		background-color: #fff;
 		width: 36px;
@@ -33,6 +37,7 @@
 			0px 1.8px 4.4px rgba(0, 0, 0, 0.145),
 			0px 5px 12px rgba(0, 0, 0, 0.21)
 		;
+		transition: transform .15s cubic-bezier(0.215, 0.61, 0.355, 1);
 
 		.svg-inline--fa {
 			color: $toggle-light;
@@ -42,6 +47,7 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			@include font-size(21px);
+			transition: opacity .15s;
 
 			&.fa-sun {
 			}
@@ -49,5 +55,38 @@
 				opacity: 0;
 			}
 		}
+	}
+	&.active {
+		.status-icon {
+			transform: translateX(1px);
+
+			.svg-inline--fa {
+				&.fa-sun {
+					opacity: 0;
+				}
+				&.fa-moon {
+					opacity: 1;
+					animation: spin .5s;
+				}
+			}
+		}
+	}
+	&.off {
+		.status-icon {
+			.svg-inline--fa {
+				&.fa-sun {
+					animation: spin .5s;
+				}
+			}
+		}
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
 	}
 }
