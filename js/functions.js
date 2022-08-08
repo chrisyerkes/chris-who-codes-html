@@ -89,36 +89,50 @@ document.addEventListener(
 			}, animLength);
 		};
 		// Initial call of the function to start the hero animation sequence
-		randomAnimation(1000, 10000);
+		if (animation) {
+			randomAnimation(1000, 10000);
+		}
 		// Animated portrait
 		const portrait = document.querySelector('.contact-photo');
 		const overlay = document.querySelector('.overlay');
 		// Start the animation when the user clicks on the portrait
 		portrait.addEventListener('click', (e) => {
+			let winWidth = window.innerWidth;
 			e.preventDefault();
-			let portraitWrap = portrait.querySelector('.portrait-wrap'),
-				portraitWidth = portraitWrap.offsetWidth,
-				portraitHeight = portraitWrap.offsetHeight,
-				portraitLeft = portrait.getBoundingClientRect().left + 12,
-				portraitTop = portrait.getBoundingClientRect().top;
-			// Add's class that turns on invisible overlay that is used to toggle off animation
-			overlay.classList.add('active');
-			// Creating space that the portrait was in now that it's set to position fixed
-			portrait.style.paddingTop = portraitHeight + 22 + 'px';
-			portraitWrap.style.width = portraitWidth + 'px';
-			portraitWrap.style.height = portraitHeight + 'px';
-			portraitWrap.style.left = portraitLeft + 'px';
-			portraitWrap.style.top = portraitTop + 'px';
-			// Add class to move to starting point of css animation
-			portrait.classList.add('loading');
-			setTimeout(() => {
-				// Adding class to prepare for css animation
-				portrait.classList.add('loaded');
+			if (winWidth > 575) {
+				let portraitWrap = portrait.querySelector('.portrait-wrap'),
+					portraitWidth = portraitWrap.offsetWidth,
+					portraitHeight = portraitWrap.offsetHeight,
+					portraitLeft = portrait.getBoundingClientRect().left + 12,
+					portraitTop = portrait.getBoundingClientRect().top;
+				// Add's class that turns on invisible overlay that is used to toggle off animation
+				overlay.classList.add('active');
+				// Creating space that the portrait was in now that it's set to position fixed
+				portraitWrap.style.width = portraitWidth + 'px';
+				portraitWrap.style.height = portraitHeight + 'px';
+				if (winWidth < 768) {
+					portrait.style.paddingTop = portraitHeight + 27 + 'px';
+					portraitWrap.style.left =
+						portraitLeft +
+						(portrait.offsetWidth - 300) / 2 -
+						12 +
+						'px';
+				} else {
+					portrait.style.paddingTop = portraitHeight + 22 + 'px';
+					portraitWrap.style.left = portraitLeft + 'px';
+				}
+				portraitWrap.style.top = portraitTop + 'px';
+				// Add class to move to starting point of css animation
+				portrait.classList.add('loading');
 				setTimeout(() => {
-					// Adding class that turns on css animation
-					portrait.classList.add('animated');
-				}, 750);
-			}, 100);
+					// Adding class to prepare for css animation
+					portrait.classList.add('loaded');
+					setTimeout(() => {
+						// Adding class that turns on css animation
+						portrait.classList.add('animated');
+					}, 750);
+				}, 100);
+			}
 		});
 		// Stop the animation when the user clicks on the overlay
 		overlay.addEventListener('click', (e) => {

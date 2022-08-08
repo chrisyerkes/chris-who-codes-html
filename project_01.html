@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Chris Who Codes</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/058714acae.js"
+			crossorigin="anonymous"
+		></script>
+		<link href="css/flickity.min.css" rel="stylesheet" />
+		<link href="style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header class="position-absolute w-100 top-0 start-0" id="main-header">
+			<nav class="navbar navbar-expand-md">
+				<div class="container">
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="offcanvas"
+						data-bs-target="#navbarNav"
+						aria-controls="navbarNav"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div
+						class="offcanvas offcanvas-end mobile-offcanvas"
+						data-bs-backdrop="false"
+						data-bs-scroll="true"
+						tabindex="-1"
+						id="navbarNav"
+					>
+						<div class="offcanvas-header">
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="offcanvas"
+								aria-label="Close"
+							>
+								<i class="fa-solid fa-xmark"></i>
+							</button>
+						</div>
+						<div class="offcanvas-body">
+							<ul
+								class="navbar-nav mx-auto mx-lg-0 ms-lg-auto h-100 main-nav"
+							>
+								<li class="nav-item">
+									<a
+										class="nav-link active"
+										aria-current="page"
+										href="#"
+										>Services</a
+									>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Work</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Skills</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Contact</a>
+								</li>
+								<li
+									class="nav-item d-flex align-items-center mt-auto light-switch-wrap"
+								>
+									<button class="light-switch off">
+										<span class="status-icon">
+											<i class="fa-regular fa-sun"></i>
+											<i class="fa-solid fa-moon"></i>
+										</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<section class="content-section hero">
+			<div class="container">
+				<div class="row social-row">
+					<div class="col">
+						<svg
+							version="1.1"
+							xmlns="http://www.w3.org/2000/svg"
+							class="svg-settings"
+						>
+							<defs>
+								<linearGradient
+									id="linear-green-blue"
+									gradientTransform="rotate(90)"
+									x1="0%"
+									y1="0%"
+									x2="100%"
+									y2="0%"
+								>
+									<stop
+										class="linear-stop1"
+										offset="0%"
+									></stop>
+									<stop
+										class="linear-stop2"
+										offset="100%"
+									></stop>
+								</linearGradient>
+								<linearGradient
+									id="linear-yellow-pink"
+									gradientTransform="rotate(110)"
+									x1="0%"
+									y1="0%"
+									x2="100%"
+									y2="0%"
+								>
+									<stop
+										class="linear-stop1"
+										offset="0%"
+									></stop>
+									<stop
+										class="linear-stop2"
+										offset="100%"
+									></stop>
+								</linearGradient>
+								<linearGradient
+									id="linear-pink-blue"
+									gradientTransform="rotate(110)"
+									x1="0%"
+									y1="0%"
+									x2="100%"
+									y2="0%"
+								>
+									<stop
+										class="linear-stop1"
+										offset="0%"
+									></stop>
+									<stop
+										class="linear-stop2"
+										offset="100%"
+									></stop>
+								</linearGradient>
+								<linearGradient
+									id="linear-teal-blue"
+									gradientTransform="rotate(110)"
+									x1="0%"
+									y1="0%"
+									x2="100%"
+									y2="0%"
+								>
+									<stop
+										class="linear-stop1"
+										offset="0%"
+									></stop>
+									<stop
+										class="linear-stop2"
+										offset="100%"
+									></stop>
+								</linearGradient>
+							</defs>
+						</svg>
+						<ul
+							class="nav social-nav justify-content-end d-md-none d-lg-flex justify-content-lg-start"
+						>
+							<li class="nav-item linkedin">
+								<a href="#" class="nav-link">
+									<i class="fab fa-linkedin-in"></i>
+								</a>
+							</li>
+							<li class="nav-item github">
+								<a href="#" class="nav-link">
+									<i class="fa-brands fa-github"></i>
+								</a>
+							</li>
+							<li class="nav-item codepen">
+								<a href="#" class="nav-link">
+									<i class="fa-brands fa-codepen"></i>
+								</a>
+							</li>
+							<li class="nav-item twitter">
+								<a href="#" class="nav-link">
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row row-cols-1 row-cols-lg-2 align-items-center">
+					<div class="col-lg-7 order-last order-lg-first hero-left">
+						<div class="row">
+							<div class="col">
+								<h1
+									class="d-none d-lg-block hero-title animation-toggle"
+								>
+									Chris Yerkes
+								</h1>
+								<p class="hero-subtitle">
+									Front end developer specializing in lorem
+									ipsum. I enjoy creating dolor sit amet and
+									experimenting with felis faucibus.
+								</p>
+								<p class="m-0 text-center text-lg-start">
+									<a
+										href="#"
+										class="btn btn-link has-arrow-right has-gradient-1"
+									>
+										Get in Touch
+										<i class="fa-solid fa-arrow-right"></i>
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-5 hero-right">
+						<p class="h1 d-lg-none hero-title text-center">
+							Chris Yerkes
+						</p>
+
+						<ul
+							class="nav social-nav d-none d-md-flex d-lg-none justify-content-center"
+						>
+							<li class="nav-item linkedin">
+								<a href="#" class="nav-link">
+									<i class="fab fa-linkedin-in"></i>
+								</a>
+							</li>
+							<li class="nav-item github">
+								<a href="#" class="nav-link">
+									<i class="fa-brands fa-github"></i>
+								</a>
+							</li>
+							<li class="nav-item codepen">
+								<a href="#" class="nav-link">
+									<i class="fa-brands fa-codepen"></i>
+								</a>
+							</li>
+							<li class="nav-item twitter">
+								<a href="#" class="nav-link">
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="content-section services">
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						<h2 class="section-title">Services I offer</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="services-slider">
+							<div class="single-service text-center">
+								<div class="card">
+									<div
+										class="service-icon d-flex align-items-center justify-content-center mx-auto"
+									>
+										<i
+											class="fa-brands fa-wordpress-simple"
+										></i>
+									</div>
+									<h4>WordPress Consulting</h4>
+									<p>
+										Do you need help with your current
+										WordPress website? Or have a need for an
+										expert to help you bring your WordPress
+										project to life? I&rsquo;m your guy.
+									</p>
+								</div>
+							</div>
+							<div class="single-service text-center">
+								<div class="card">
+									<div
+										class="service-icon d-flex align-items-center justify-content-center mx-auto"
+									>
+										<i
+											class="fa-solid fa-business-time"
+										></i>
+									</div>
+									<h4>WordPress Agency Sub-Contractor</h4>
+									<p>
+										Are you a web design agency looking for
+										someone to bring your designs to life in
+										the WordPress CMS for your clients? I
+										can take your finished designs and
+										develop a fully responsive and search
+										engine optimized WordPress website.
+									</p>
+								</div>
+							</div>
+							<div class="single-service text-center">
+								<div class="card">
+									<div
+										class="service-icon d-flex align-items-center justify-content-center mx-auto"
+									>
+										<i class="fa-solid fa-code"></i>
+									</div>
+									<h4>WordPress Whole Site Development</h4>
+									<p>
+										I have been building fully scoped
+										WordPress websites for over 15 years. I
+										have the experience to help you from any
+										stage of your WordPress site development
+										and bring it over the finish line.
+									</p>
+								</div>
+							</div>
+							<div class="single-service text-center">
+								<div class="card">
+									<div
+										class="service-icon d-flex align-items-center justify-content-center mx-auto"
+									>
+										<i class="fa-solid fa-bolt"></i>
+									</div>
+									<h4>Headless WordPress Development</h4>
+									<p>
+										The future of WordPress websites. Get
+										the fastest performance possible by
+										requesting a headless WordPress website.
+										This website is headless!
+									</p>
+								</div>
+							</div>
+							<div class="single-service text-center">
+								<div class="card">
+									<div
+										class="service-icon d-flex align-items-center justify-content-center mx-auto"
+									>
+										<i
+											class="fa-solid fa-wand-magic-sparkles"
+										></i>
+									</div>
+									<h4>WordPress Theme Customization</h4>
+									<p>
+										If you&rsquo;re looking for some help
+										customizing a great theme you already
+										have installed and running on your
+										WordPress website that just needs a
+										little extra &ldquo;something,&rdquo;
+										let me help you shape the look and the
+										functionality to your vision.
+									</p>
+								</div>
+							</div>
+							<div class="single-service text-center">
+								<div class="card">
+									<div
+										class="service-icon d-flex align-items-center justify-content-center mx-auto"
+									>
+										<i class="fa-solid fa-wrench"></i>
+									</div>
+									<h4>WordPress Website Maintenance</h4>
+									<p>
+										If you already have a WordPress website
+										and need help with content or
+										functionality updates, I can help.
+										I&rsquo;ve successfully helped hundreds
+										of clients manage their websites in my
+										15+ years of experience.
+									</p>
+								</div>
+							</div>
+							<div class="single-service text-center">
+								<div class="card">
+									<div
+										class="service-icon d-flex align-items-center justify-content-center mx-auto"
+									>
+										<i class="fa-solid fa-plug"></i>
+									</div>
+									<h4>WordPress Plugin Development</h4>
+									<p>
+										Sometimes the plugin you want, or need,
+										doesn&rsquo;t exist despite
+										WordPress&rsquo;s massive plugin
+										library. Let me help develop one from
+										scratch, or I can help you find the
+										perfect off-the-shelf solution.
+									</p>
+								</div>
+							</div>
+							<div class="single-service text-center">
+								<div class="card">
+									<div
+										class="service-icon d-flex align-items-center justify-content-center mx-auto"
+									>
+										<i class="fa-solid fa-palette"></i>
+									</div>
+									<h4>WordPress Website Design</h4>
+									<p>
+										While I do not design websites myself (I
+										just write code for them), I have many,
+										many talented web design partners that I
+										work with that do.
+									</p>
+								</div>
+							</div>
+							<div class="single-service text-center">
+								<div class="card">
+									<div
+										class="service-icon d-flex align-items-center justify-content-center mx-auto"
+									>
+										<i class="fa-regular fa-file-code"></i>
+									</div>
+									<h4>General Web Development</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="content-section has-tinted-background my-work">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<h2 class="section-title">View my work</h2>
+						<div
+							class="work-wrapper d-block d-lg-flex featured-work"
+						>
+							<div class="featured-work-image">
+								<img
+									src="images/fpo_featured-work.jpg"
+									alt="Featured Work"
+									class="img-fluid"
+								/>
+							</div>
+							<div class="featured-work-description">
+								<h5>Featured</h5>
+								<div
+									class="d-flex flex-column justify-content-center h-100 description-wrapper"
+								>
+									<h3>Coffee by Benjamin</h3>
+									<p>
+										An e-commerce application built with
+										React & Shopify for a coffee roasting
+										company.
+									</p>
+									<p>
+										<a
+											href="#"
+											class="btn btn-link btn-link-sm stretched-link has-arrow-right"
+											>View Project
+											<i
+												class="fa-solid fa-arrow-right"
+											></i
+										></a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid work-grid" style="--bs-gap: 80px 74px">
+					<div class="g-col-12 g-col-md-6 work-item">
+						<div class="card">
+							<div class="work-image">
+								<img
+									src="images/fpo_work-item.jpg"
+									alt="Work Item"
+									class="img-fluid"
+								/>
+							</div>
+							<div class="work-description">
+								<h3>Project Two</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur
+									adipiscing elit. Donec eget ex euismod,
+									scelerisque nisi eu, consectetur nisi.
+								</p>
+								<p>
+									<a
+										href="#"
+										class="btn stretched-link btn-link btn-link-sm"
+										>View Project
+										<i class="fa-solid fa-arrow-right"></i
+									></a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="g-col-12 g-col-md-6 work-item">
+						<div class="card">
+							<div class="work-image">
+								<img
+									src="images/fpo_work-item.jpg"
+									alt="Work Item"
+									class="img-fluid"
+								/>
+							</div>
+							<div class="work-description">
+								<h3>Project Three</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur
+									adipiscing elit. Donec eget ex euismod,
+									scelerisque nisi eu, consectetur nisi.
+								</p>
+								<p>
+									<a
+										href="#"
+										class="btn stretched-link btn-link btn-link-sm"
+										>View Project
+										<i class="fa-solid fa-arrow-right"></i
+									></a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="g-col-12 g-col-md-6 work-item">
+						<div class="card">
+							<div class="work-image">
+								<img
+									src="images/fpo_work-item.jpg"
+									alt="Work Item"
+									class="img-fluid"
+								/>
+							</div>
+							<div class="work-description">
+								<h3>Project Four</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur
+									adipiscing elit. Donec eget ex euismod,
+									scelerisque nisi eu, consectetur nisi.
+								</p>
+								<p>
+									<a
+										href="#"
+										class="btn stretched-link btn-link btn-link-sm"
+										>View Project
+										<i class="fa-solid fa-arrow-right"></i
+									></a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="g-col-12 g-col-md-6 work-item">
+						<div class="card">
+							<div class="work-image">
+								<img
+									src="images/fpo_work-item.jpg"
+									alt="Work Item"
+									class="img-fluid"
+								/>
+							</div>
+							<div class="work-description">
+								<h3>Project Five</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur
+									adipiscing elit. Donec eget ex euismod,
+									scelerisque nisi eu, consectetur nisi.
+								</p>
+								<p>
+									<a
+										href="#"
+										class="btn stretched-link btn-link btn-link-sm"
+										>View Project
+										<i class="fa-solid fa-arrow-right"></i
+									></a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col text-center">
+						<p class="rgb-button-wrap">
+							<a
+								href="#"
+								class="btn btn-gradient has-btn-gradient-1"
+							>
+								View All Projects
+							</a>
+							<span></span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="content-section my-skills">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<h2 class="section-title">My skills</h2>
+					</div>
+					<div class="col-md-8">
+						<ul class="skills-list grid">
+							<li class="g-col-12 g-col-sm-6">
+								<div class="bullet">
+									<i class="fa-solid fa-circle-check"></i>
+								</div>
+								HTML
+							</li>
+							<li class="g-col-12 g-col-sm-6">
+								<div class="bullet">
+									<i class="fa-solid fa-circle-check"></i>
+								</div>
+								CSS
+							</li>
+							<li class="g-col-12 g-col-sm-6">
+								<div class="bullet">
+									<i class="fa-solid fa-circle-check"></i>
+								</div>
+								JavaScript
+							</li>
+							<li class="g-col-12 g-col-sm-6">
+								<div class="bullet">
+									<i class="fa-solid fa-circle-check"></i>
+								</div>
+								PHP
+							</li>
+							<li class="g-col-12 g-col-sm-6">
+								<div class="bullet">
+									<i class="fa-solid fa-circle-check"></i>
+								</div>
+								WordPress
+							</li>
+							<li class="g-col-12 g-col-sm-6">
+								<div class="bullet">
+									<i class="fa-solid fa-circle-check"></i>
+								</div>
+								React
+							</li>
+							<li class="g-col-12 g-col-sm-6">
+								<div class="bullet">
+									<i class="fa-solid fa-circle-check"></i>
+								</div>
+								WP Engine
+							</li>
+							<li class="g-col-12 g-col-sm-6">
+								<div class="bullet">
+									<i class="fa-solid fa-circle-check"></i>
+								</div>
+								Headless CMS
+							</li>
+							<li class="g-col-12 g-col-sm-6">
+								<div class="bullet">
+									<i class="fa-solid fa-circle-check"></i>
+								</div>
+								Responsive Development
+							</li>
+							<li class="g-col-12 g-col-sm-6">
+								<div class="bullet">
+									<i class="fa-solid fa-circle-check"></i>
+								</div>
+								Attention to Design
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="content-section has-tinted-background contact-form">
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						<h2 class="section-title">
+							Let&rsquo;s build something together
+						</h2>
+					</div>
+				</div>
+				<div
+					class="row justify-content-between flex-column-reverse flex-md-row"
+				>
+					<div class="col-md-4 col-lg-4 contact-photo">
+						<p tabindex="0" class="portrait-wrap">
+							<img
+								src="images/cropped-square.jpg"
+								class="img-fluid"
+								alt="Photo of me, Chris Yerkes"
+							/>
+						</p>
+						<ul
+							class="nav social-nav flex-column flex-sm-row align-items-center text-links"
+						>
+							<li class="nav-item">
+								<a href="#" class="nav-link"
+									>LinkedIn
+									<i class="fa-solid fa-arrow-right"></i
+								></a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link"
+									>CodePen
+									<i class="fa-solid fa-arrow-right"></i
+								></a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link"
+									>GitHub
+									<i class="fa-solid fa-arrow-right"></i
+								></a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link"
+									>Twitter
+									<i class="fa-solid fa-arrow-right"></i
+								></a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-7 col-lg-7 mb-5 mb-md-0 form-container">
+						<form>
+							<div class="row">
+								<div class="col-sm-6 mb-4">
+									<div class="form-floating">
+										<input
+											type="text"
+											class="form-control"
+											id="inputName1"
+											placeholder="Your name..."
+										/>
+										<label for="inputName1">
+											Your name
+										</label>
+									</div>
+								</div>
+								<div class="col-sm-6 mb-4">
+									<div class="form-floating">
+										<input
+											type="email"
+											class="form-control"
+											id="inputEmail1"
+											placeholder="name@example.com"
+										/>
+										<label for="inputEmail1"
+											>Your email</label
+										>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col mb-4">
+									<div class="form-floating">
+										<textarea
+											class="form-control"
+											id="inputMessage1"
+											placeholder="Your message..."
+											style="min-height: 200px"
+										></textarea>
+										<label for="inputMessage1"
+											>Your message</label
+										>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="form-check form-switch mb-3">
+										<input
+											class="form-check-input"
+											type="checkbox"
+											role="switch"
+											id="inputPermission1"
+										/>
+										<label
+											for="inputPermission1"
+											class="form-check-label"
+										>
+											I agree to being contacted
+										</label>
+									</div>
+									<div class="form-check form-switch mb-4">
+										<input
+											class="form-check-input"
+											type="checkbox"
+											role="switch"
+											id="inputPermission2"
+										/>
+										<label
+											for="inputPermission2"
+											class="form-check-label"
+										>
+											Yes, I would like to receive
+											occasional updates from Chris
+											(optional)
+										</label>
+									</div>
+									<p class="rgb-button-wrap">
+										<button
+											type="submit"
+											class="btn btn-gradient has-btn-gradient-2"
+										>
+											Send a message
+										</button>
+										<span></span>
+									</p>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer id="main-footer">
+			<div class="container">
+				<div class="row align-items-center">
+					<div
+						class="col-sm-6 text-center text-sm-start mb-3 mb-sm-0"
+					>
+						<p class="name">Chris Yerkes</p>
+						<p class="copyright">
+							&copy; 2022 Mops Digital, LLC. All rights reserved.
+						</p>
+					</div>
+					<div class="col-sm-6 footer-social-nav">
+						<ul
+							class="nav justify-content-center justify-content-sm-end social-nav white-social-nav"
+						>
+							<li class="nav-item linkedin">
+								<a href="#" class="nav-link">
+									<i class="fab fa-linkedin-in"></i>
+								</a>
+							</li>
+							<li class="nav-item github">
+								<a href="#" class="nav-link">
+									<i class="fab fa-github"></i>
+								</a>
+							</li>
+							<li class="nav-item codepen">
+								<a href="#" class="nav-link">
+									<i class="fab fa-codepen"></i>
+								</a>
+							</li>
+							<li class="nav-item twitter">
+								<a href="#" class="nav-link">
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="overlay"></div>
+
+		<script src="js/flickity.pkgd.min.js"></script>
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script class="remove" src="js/functions.min.js"></script>
+	</body>
+</html>
