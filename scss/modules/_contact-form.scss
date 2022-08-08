@@ -14,6 +14,10 @@
 			position: absolute;
 			top: 0;
 			z-index: 50;
+
+			@include media-breakpoint-down(md) {
+				max-width: 300px;
+			}
 		}
 		&::before {
 			width: calc(100% - ((var(--bs-gutter-x) * 0.5) * 2));
@@ -22,6 +26,10 @@
 			left: 50%;
 			transform: translateX(-50%);
 			border-radius: 100%;
+
+			@include media-breakpoint-down(md) {
+				padding-top: calc(300px - 6px);
+			}
 		}
 		&::after {
 			content: 'Take me home!';
@@ -35,6 +43,10 @@
 			padding-top: calc((100% - ((var(--bs-gutter-x) * 0.5) * 2)) / 2 - 30px);
 			animation: textrgb 2s infinite;
 			color: red;
+
+			@include media-breakpoint-down(md) {
+				padding-top: 25%;
+			}
 		}
 		p {
 			opacity: 1;
@@ -45,6 +57,10 @@
 			cursor: pointer;
 			z-index: 100;
 
+			@include media-breakpoint-down(md) {
+				max-width: 300px;
+				margin: 0 auto;
+			}
 			&::before,
 			&::after {
 				opacity: 0;
@@ -63,6 +79,13 @@
 				left: -15px;
 				box-shadow: 30px 45px 0 #07b2ff;
 				transform: translateY(-50%);
+
+				@include media-breakpoint-down(md) {
+					left: 50%;
+					max-width: calc(.8 * 300px);
+					transform: translate(calc(-50% - 45px),-50%);
+					box-shadow: 45px 45px 0 #07b2ff;
+				}
 			}
 			&::after {
 				background: #8dff08;
@@ -72,6 +95,14 @@
 				right: -15px;
 				box-shadow: -30px -45px 0 #ffeb3b;
 				transform: translateY(-50%);
+
+				@include media-breakpoint-down(md) {
+					max-width: 300px;
+					right: 50%;
+					max-width: calc(.8 * 300px);
+					transform: translate(calc(50% + 45px), -50%);
+					box-shadow: -45px -45px 0 #07b2ff;
+				}
 			}
 			&:focus,
 			&:hover {
@@ -90,6 +121,7 @@
 		&.loading {
 			p {
 				position: fixed;
+				left: 50%;
 				z-index: 1000;
 			}
 		}

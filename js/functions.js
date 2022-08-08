@@ -2,6 +2,15 @@
 document.addEventListener(
 	'DOMContentLoaded',
 	function (event) {
+		// Mobile Menu Toggler
+		// const navToggler = document.querySelector('.navbar-toggler');
+		const mobileNav = document.querySelector('.offcanvas');
+		mobileNav.addEventListener('hide.bs.offcanvas', (event) => {
+			mobileNav.classList.add('hiding');
+		});
+		// navToggler.addEventListener('click', function () {
+		// 	navToggler.classList.toggle('open');
+		// });
 		// Light/dark mode toggle
 		const lightswitch = document.querySelector('.light-switch');
 		lightswitch.addEventListener('click', (e) => {
